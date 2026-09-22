@@ -20,3 +20,8 @@ def create_something():
 @app.get("/students/{usn}")
 def get_result(usn):
     return {"result":"Distinction", "usn":usn}
+
+#path method with type hint
+@app.get("/candidate/{rollno}")
+def get_candidate(rollno:int):
+    return {"result":"Distinction", "rollno":rollno,"type":str(type(rollno))}
